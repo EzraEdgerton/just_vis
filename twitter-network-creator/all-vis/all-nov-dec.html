@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <title>UC Digital Scholarship Center: Pilot Projects</title>
+    <link rel="stylesheet" href="/ext/css/bootstrap.min.css"/>  
+    <link rel="stylesheet" href="/ext/css/dc.css"/>  
+    <!--<link rel="stylesheet" href="plantgenmap/map.css"/> -->
+    <link rel="stylesheet" href="/twitter-network-creator/twitter.css">
+
+
+
+  </head>
+  <body ng-app="dighumApp">
+  <div class='container-fluid' >
+    <div ng-controller="allvisNovDec" class="twitterviewbox">
+
+    <div class='row' style='padding-top: 15px'>
+        <div class='col-sm-3 col-lg-2'>
+        <a href='/twitter-network-creator/all-vis/all-aug.html'> <button type='button' class="btn btn-primary" >Post Shooting Networks</button></a>
+        </div>
+        <div class='col-sm-3 col-lg-2'>
+        <button type='button' class="btn btn-secondary">Post Acquittal Networks</button>
+        </div>
+        <div class='col-sm-3 col-lg-2'>
+        <a href='/twitter-network-creator/basic-stats/basic-aug.html'> <button type='button' class="btn btn-primary">Post Shooting Stats</button></a>
+        </div>
+        <div class='col-sm-3 col-lg-2'>
+        <a href='/twitter-network-creator/basic-stats/basic-nov-dec.html'> <button type='button' class="btn btn-primary">Post Acquittal Stats</button></a>
+        </div>
+    </div>
+
+ 
+      <div class='row'>
+        <div class='col-lg-10 '>
+        <h1 style='font-family: Helvetica'>
+        Post Darren Wilson Acquittal Twitter Networks
+        </h1>
+        <h3> Nov 24 to Dec 7 2014</h3>
+        </div>
+      </div>
+
+      <div class='row'>
+    
+      </div>
+
+      
+
+
+      
+      <div class='row'>
+          <div class='col-lg-6'>
+          <h6>Change Day</h6>
+              <select ng-model="day" ng-options="m for m in days" ng-change="viz()"></select>
+        </div>
+        <div class='col-lg-6'>
+         <div class='dc-data-count' style='float:left'>
+            <h6>
+            <span>
+            <span class="filter-count"></span>
+             selected out of 
+            <span class="total-count"></span>
+             records | 
+            <a href="javascript:dc.filterAll(); dc.renderAll()" ng-click="resetNodeMap()">Reset All</a>
+          </span>
+           </h6>
+         </div>
+        </div>
+      </div>
+    <div class="row">
+         <div class='col-lg-12' id='dc-depth-chart'>
+           <h5 style="float:center">Tweets by hour</h5>
+         </div>
+    </div>
+    <div class='row'>
+       <div class='col-lg-12'>
+        <div id="graph"></div>
+        </div>
+      </div>
+        <div class='row'>
+    <div class='col-lg-12'>
+        <h5>Toggle Node Size By:</h5>
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-primary" ng-click='toggleButton(1)'>
+            <input type="radio" name="options"  id="option1" > Tweets
+          </label>
+          <label class="btn btn-primary active" ng-click='toggleButton(2)'>
+            <input type="radio" name="options"  id="option2" checked> Links
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+     <div class='col-lg-12'>
+    <div id="network" ></div>
+    </div>
+    </div>
+  </div>
+</div>
+  <script src="/ext/angular.min.js"></script>
+    <script src="/ext/jquery.min.js"></script>
+    <script src='/ext/bootstrap.min.js'></script>
+    <script src='/ext/angular-route.min.js'></script>
+   <!-- <script src="ext/d3.v3.min.js"></script>-->
+    <script src="/ext/mapjs/d3.v3.min.js"></script>
+    <script src="/ext/crossfilter.js"></script>
+    <script src="/ext/dc.js"></script>
+    <script src="/ext/mapjs/queue.v1.min.js"></script>
+    <script src="/ext/mapjs/topojson.js"></script>
+    <script src="/app.js"></script>
+    <!--<script src="map.controller.js"></script>-->
+    <script src="/twitter-network-creator/all-vis/all-vis-nov-dec.controller.js"></script>
+
+</body>
+</html>
+    
